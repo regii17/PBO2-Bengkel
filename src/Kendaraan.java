@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Kendaraan {
+
+    // encapsulation
     private String platNo;
     private String warna;
     private String merk;
@@ -29,10 +31,11 @@ public abstract class Kendaraan {
         return this.expressService;
     }
 
-    public void serviceExpress(){
-        this.expressService = true;
+    // overload method
+    public void serviceExpress(boolean express){
+        this.expressService = express;
     }
-    public void serviceRegular(){
+    public void serviceExpress(){
         this.expressService = false;
     }
 

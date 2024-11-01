@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// inheritance
 public class Motor extends Kendaraan {
     private static final int BIAYA_SERVICE_EXPRESS = 150000;
     private static final int BIAYA_SERVICE_REGULAR = 80000;
@@ -10,6 +11,8 @@ public class Motor extends Kendaraan {
         super(platNo, warna, merk, tipe, '2', pemilik);
     }
 
+
+    // overriding
     @Override
     public int calculateCost() {
         int baseCost = isExpressService() ? BIAYA_SERVICE_EXPRESS : BIAYA_SERVICE_REGULAR;

@@ -22,7 +22,7 @@ public class Main {
         while (next) {
             showMenu();
             int pil = in.nextInt();
-            in.nextLine(); // Clear the newline character
+            in.nextLine();
 
             switch (pil) {
                 case 1:
@@ -120,9 +120,9 @@ public class Main {
         in.nextLine();
 
         if (speedChoice == 1) {
-            kendaraan.serviceExpress();
+            kendaraan.serviceExpress(true);
         } else if (speedChoice == 2) {
-            kendaraan.serviceRegular();
+            kendaraan.serviceExpress();
         } else {
             System.out.println("Pilihan kecepatan service tidak valid.");
             return null;
@@ -209,7 +209,7 @@ public class Main {
     }
 
     private static void showAntrian() {
-        System.out.println("Lihat antrian");
+        System.out.println("Lihat antrian : ");
         for (int i = 0; i < kendaraanCount; i++) {
             if (kendaraanList[i].isInProgress()) {
                 System.out.println("Plat No : " + kendaraanList[i].getPlatNo());
